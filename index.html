@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dieta Keto en Argentina - Proyecto Completo</title>
+  <title>Dieta Keto en Argentina - Proyecto Mejorado</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-    /* Reset */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -17,7 +16,8 @@
       font-family: 'Montserrat', sans-serif;
       max-width: 900px;
       margin: auto;
-      padding: 110px 20px 100px 20px;
+      padding: 0 20px 100px 20px;
+      padding-top: 140px; /* espacio para header + nav fijo */
       background: #fff;
       color: #0d1b2a;
       position: relative;
@@ -25,20 +25,20 @@
       overflow-x: hidden;
     }
 
-    /* Fondo con imágenes */
+    /* Fondo más visible */
     body::before {
       content: "";
       position: fixed;
-      top: 0; bottom: 0; left: -70px; right: -70px;
+      top: 0; bottom: 0; left: 0; right: 0;
       pointer-events: none;
       background-image:
-        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=70'),
-        url('https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=900&q=70'),
-        url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=70');
+        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=90'),
+        url('https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=900&q=90'),
+        url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=90');
       background-repeat: no-repeat, no-repeat, no-repeat;
-      background-position: top left 50px, bottom right 50px, center right 150px;
-      background-size: 350px 260px, 390px 300px, 320px 250px;
-      opacity: 0.15;
+      background-position: top left 80px, bottom right 80px, center right 130px;
+      background-size: 350px 260px, 400px 300px, 320px 270px;
+      opacity: 0.22;
       z-index: -1;
     }
 
@@ -66,12 +66,13 @@
       top: 88px;
       left: 50%;
       transform: translateX(-50%);
-      width: 900px;
-      background: #1c3f9429;
-      padding: 20px 25px;
-      box-shadow: 0 8px 24px rgba(28,63,148,0.5);
+      width: 100vw;
+      max-width: 900px;
+      background: #1c3f94cc;
+      padding: 15px 25px;
+      box-shadow: 0 6px 24px rgba(28,63,148,0.8);
       border-radius: 0 0 16px 16px;
-      backdrop-filter: saturate(230%) blur(16px);
+      backdrop-filter: saturate(180%) blur(14px);
       border: solid 2px #1c3f94;
       overflow-x: auto;
       white-space: nowrap;
@@ -108,7 +109,6 @@
       outline: none;
     }
 
-    /* PDF sections */
     section.pdf-section {
       margin-top: 150px;
       margin-bottom: 110px;
@@ -199,7 +199,7 @@
       color: #ffd600;
       outline: none;
     }
-    .icon {
+    svg.icon {
       vertical-align: middle;
       margin-right: 10px;
       filter: drop-shadow(0 0 1px rgba(0,0,0,0.27));
@@ -286,7 +286,7 @@
 </head>
 <body>
 
-  <header>Dieta Keto en Argentina - Proyecto Completo</header>
+  <header>Dieta Keto en Argentina - Proyecto Mejorado</header>
 
   <nav aria-label="Índice de documentos PDF">
     <strong>Índice:</strong>
@@ -310,14 +310,14 @@
     <a href="#pdf18">Menú keto de emergencia</a>
   </nav>
 
-  <!-- Aquí agregá todas las secciones PDF, igual que antes -->
-
-  <div class="pdf-section" id="pdf1">
+  <!-- Aquí van todas las secciones PDF -->
+  <section class="pdf-section" id="pdf1">
     <h2>La Biblia Keto en Argentina</h2>
     <iframe src="https://drive.google.com/file/d/1y-tEJN1riuMy-s-zoHOIyTDcEIChjKEJ/preview"></iframe>
     <a class="download-link" href="https://drive.google.com/uc?export=download&id=1y-tEJN1riuMy-s-zoHOIyTDcEIChjKEJ" target="_blank" rel="noopener">Descargar PDF</a>
-  </div>
-  <!-- Repetí para todos los demás PDFs con su id y título -->
+  </section>
+
+  <!-- Repetí para tus otros PDFs -->
 
   <button id="topBtn" title="Volver arriba">↑</button>
 
@@ -331,9 +331,8 @@
   </footer>
 
   <script>
-    // Animar fade-in al bajar scroll
+    // Animación fade-in on scroll
     const pdfSections = document.querySelectorAll('.pdf-section');
-
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -342,7 +341,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     pdfSections.forEach(sec => observer.observe(sec));
 
     // Botón subir arriba
