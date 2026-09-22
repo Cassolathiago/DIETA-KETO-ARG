@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dieta Keto en Argentina - Proyecto Mejorado</title>
-
+  <title>Dieta Keto en Argentina - Proyecto Completo</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -17,20 +16,12 @@
       max-width: 900px;
       margin: auto;
       padding: 0 20px 100px 20px;
-      padding-top: 140px; /* espacio para header + nav fijo */
+      padding-top: 140px;
       background: #fff;
       color: #0d1b2a;
       position: relative;
       min-height: 100vh;
       overflow-x: hidden;
-    }
-
-    /* Fondo más visible */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; bottom: 0; left: 0; right: 0;
-      pointer-events: none;
       background-image:
         url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=90'),
         url('https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=900&q=90'),
@@ -38,8 +29,9 @@
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: top left 80px, bottom right 80px, center right 130px;
       background-size: 350px 260px, 400px 300px, 320px 270px;
-      opacity: 0.22;
-      z-index: -1;
+      background-attachment: fixed;
+      background-blend-mode: lighten;
+      opacity: 1;
     }
 
     header {
@@ -120,14 +112,17 @@
       transform: translateY(40px);
       transition: opacity 0.85s ease, transform 0.85s ease;
     }
+
     section.pdf-section.visible {
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
+
     section.pdf-section:hover {
       box-shadow: 0 20px 55px rgba(255,183,3,0.38);
       transform: translateY(-8px);
     }
+
     section.pdf-section h2 {
       color: #274472;
       font-size: 2.35em;
@@ -137,6 +132,7 @@
       padding-bottom: 12px;
       user-select: text;
     }
+
     iframe {
       margin-top: 28px;
       border-radius: 25px;
@@ -147,6 +143,7 @@
       transition: box-shadow 0.5s ease;
       user-select: none;
     }
+
     iframe:hover {
       box-shadow: 0 0 52px #ffb703cc;
     }
@@ -166,6 +163,7 @@
       transition: all 0.5s ease;
       user-select: none;
     }
+
     .download-link:hover {
       background: #ffb703;
       color: #1c3f94;
@@ -187,6 +185,7 @@
       margin-right: auto;
       user-select: none;
     }
+
     footer a {
       color: #ffea82;
       text-decoration: none;
@@ -195,10 +194,12 @@
       vertical-align: middle;
       transition: color 0.4s ease;
     }
+
     footer a:hover, footer a:focus {
       color: #ffd600;
       outline: none;
     }
+
     svg.icon {
       vertical-align: middle;
       margin-right: 10px;
@@ -226,55 +227,65 @@
       font-weight: 900;
       text-shadow: 0 0 5px #684c00;
     }
+
     #topBtn.show {
       opacity: 1;
       visibility: visible;
     }
+
     #topBtn:hover {
       background: #ddb101;
       box-shadow: 0 0 50px #ddb101cc;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       body {
         padding: 120px 15px 100px 15px;
       }
+
       header {
         font-size: 2.8em;
         width: 100vw;
         padding: 22px 15px;
         border-radius: 0;
       }
+
       nav {
         width: 100vw;
         padding: 15px 20px;
         top: 78px;
         border-radius: 0;
       }
+
       nav strong {
         font-size: 1.1em;
       }
+
       nav a {
         font-size: 0.9em;
         margin: 6px 12px 6px 0;
         padding: 8px 16px;
       }
+
       section.pdf-section {
         margin-top: 140px;
         padding: 24px 18px;
       }
+
       iframe {
         height: 460px;
       }
+
       .download-link {
         font-size: 1em;
         padding: 14px 34px;
       }
+
       footer {
         font-size: 1.1em;
         padding: 28px 14px;
       }
+
       #topBtn {
         padding: 15px 18px;
         font-size: 18px;
@@ -286,38 +297,137 @@
 </head>
 <body>
 
-  <header>Dieta Keto en Argentina - Proyecto Mejorado</header>
+  <header>Dieta Keto en Argentina - Proyecto Completo</header>
 
   <nav aria-label="Índice de documentos PDF">
     <strong>Índice:</strong>
-    <a href="#pdf1">La Biblia Keto en Argentina</a>
-    <a href="#pdf2">Keto para salir a comer afuera</a>
-    <a href="#pdf3">Guía Keto para asados y parrillas</a>
-    <a href="#pdf4">Guía Anti-Meseta Keto</a>
-    <a href="#pdf5">Ayuno intermitente keto</a>
-    <a href="#pdf6">Guías de compras de supermercado ARG</a>
-    <a href="#pdf7">Recetario dulces y postres sin azúcar</a>
-    <a href="#pdf8">Keto para salir a comer afuera (2)</a>
-    <a href="#pdf9">Progreso keto</a>
-    <a href="#pdf10">Plan keto 21 días</a>
-    <a href="#pdf11">Biblia keto argentina (1)</a>
-    <a href="#pdf12">Biblia keto argentina (2)</a>
-    <a href="#pdf13">Biblia keto argentina (3)</a>
-    <a href="#pdf14">Biblia keto argentina (4)</a>
-    <a href="#pdf15">Biblia keto argentina (5)</a>
-    <a href="#pdf16">Biblia keto argentina (6)</a>
-    <a href="#pdf17">Biblia keto argentina (7)</a>
-    <a href="#pdf18">Menú keto de emergencia</a>
+    <a href="#pdf1">La Biblia Keto en Argentina</a>  
+    <a href="#pdf2">Keto para salir a comer afuera</a>  
+    <a href="#pdf3">Guía Keto para asados y parrillas</a>  
+    <a href="#pdf4">Guía Anti-Meseta Keto</a>  
+    <a href="#pdf5">Ayuno intermitente keto</a>  
+    <a href="#pdf6">Guías de compras de supermercado ARG</a>  
+    <a href="#pdf7">Recetario dulces y postres sin azúcar</a>  
+    <a href="#pdf8">Keto para salir a comer afuera (2)</a>  
+    <a href="#pdf9">Progreso keto</a>  
+    <a href="#pdf10">Plan keto 21 días</a>  
+    <a href="#pdf11">Biblia keto argentina (1)</a>  
+    <a href="#pdf12">Biblia keto argentina (2)</a>  
+    <a href="#pdf13">Biblia keto argentina (3)</a>  
+    <a href="#pdf14">Biblia keto argentina (4)</a>  
+    <a href="#pdf15">Biblia keto argentina (5)</a>  
+    <a href="#pdf16">Biblia keto argentina (6)</a>  
+    <a href="#pdf17">Biblia keto argentina (7)</a>  
+    <a href="#pdf18">Menú keto de emergencia</a>  
   </nav>
 
-  <!-- Aquí van todas las secciones PDF -->
   <section class="pdf-section" id="pdf1">
     <h2>La Biblia Keto en Argentina</h2>
     <iframe src="https://drive.google.com/file/d/1y-tEJN1riuMy-s-zoHOIyTDcEIChjKEJ/preview"></iframe>
     <a class="download-link" href="https://drive.google.com/uc?export=download&id=1y-tEJN1riuMy-s-zoHOIyTDcEIChjKEJ" target="_blank" rel="noopener">Descargar PDF</a>
   </section>
 
-  <!-- Repetí para tus otros PDFs -->
+  <section class="pdf-section" id="pdf2">
+    <h2>Keto para salir a comer afuera</h2>
+    <iframe src="https://drive.google.com/file/d/1CJrPnlPnAr16v1zRZoDJnS7mJnP7Ndtg/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1CJrPnlPnAr16v1zRZoDJnS7mJnP7Ndtg" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf3">
+    <h2>Guía Keto para asados y parrillas</h2>
+    <iframe src="https://drive.google.com/file/d/1aFBOiNlWWSVsBWak9tlCU3RSR0yCyIww/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1aFBOiNlWWSVsBWak9tlCU3RSR0yCyIww" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf4">
+    <h2>Guía Anti-Meseta Keto</h2>
+    <iframe src="https://drive.google.com/file/d/1S4uW3rB8rymGE0eTcbn14S5SM_macebF/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1S4uW3rB8rymGE0eTcbn14S5SM_macebF" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf5">
+    <h2>Ayuno intermitente keto</h2>
+    <iframe src="https://drive.google.com/file/d/1HixMHsA5gnvBLwrhzJCy0SyV10ZKWEzm/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1HixMHsA5gnvBLwrhzJCy0SyV10ZKWEzm" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf6">
+    <h2>Guías de compras de supermercado ARG</h2>
+    <iframe src="https://drive.google.com/file/d/1S0bfbqoa8e8g3eFvNrXkUOCnLa9MqACX/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1S0bfbqoa8e8g3eFvNrXkUOCnLa9MqACX" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf7">
+    <h2>Recetario dulces y postres sin azúcar</h2>
+    <iframe src="https://drive.google.com/file/d/1RwgeiAKEsp2GeIuonMjtA1Nd414lxUYI/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1RwgeiAKEsp2GeIuonMjtA1Nd414lxUYI" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf8">
+    <h2>Keto para salir a comer afuera (2)</h2>
+    <iframe src="https://drive.google.com/file/d/12y4uOaaGSAw2_GSZR8agRHq2niuemlzF/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=12y4uOaaGSAw2_GSZR8agRHq2niuemlzF" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf9">
+    <h2>Progreso keto</h2>
+    <iframe src="https://drive.google.com/file/d/1vmrMmMulVWvvEXAu2s0EZ6ShJ3XO-dtb/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1vmrMmMulVWvvEXAu2s0EZ6ShJ3XO-dtb" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf10">
+    <h2>Plan keto 21 días</h2>
+    <iframe src="https://drive.google.com/file/d/1YDTWiiVItjz9qQ_k2unLChtk8h7pOeT3/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1YDTWiiVItjz9qQ_k2unLChtk8h7pOeT3" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf11">
+    <h2>Biblia keto argentina (1)</h2>
+    <iframe src="https://drive.google.com/file/d/1NSNQXjxuXkHsjXih6DrsFpfSz8JKnzzq/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1NSNQXjxuXkHsjXih6DrsFpfSz8JKnzzq" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf12">
+    <h2>Biblia keto argentina (2)</h2>
+    <iframe src="https://drive.google.com/file/d/1WyKFgmKXiBdCvEXYBb8bh0QbdDZvNfiB/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1WyKFgmKXiBdCvEXYBb8bh0QbdDZvNfiB" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf13">
+    <h2>Biblia keto argentina (3)</h2>
+    <iframe src="https://drive.google.com/file/d/17QTD1pmGkPPwdHqx1rUPGiS8gVWlN2te/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=17QTD1pmGkPPwdHqx1rUPGiS8gVWlN2te" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf14">
+    <h2>Biblia keto argentina (4)</h2>
+    <iframe src="https://drive.google.com/file/d/1-XnuxNU82L9NXdlN_mnUusWniCK3-Lw0/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1-XnuxNU82L9NXdlN_mnUusWniCK3-Lw0" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf15">
+    <h2>Biblia keto argentina (5)</h2>
+    <iframe src="https://drive.google.com/file/d/17FC19FXP-Z-cqrz94Al3RmKf3Z06hxbH/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=17FC19FXP-Z-cqrz94Al3RmKf3Z06hxbH" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf16">
+    <h2>Biblia keto argentina (6)</h2>
+    <iframe src="https://drive.google.com/file/d/1GcskQNahO_zlMFSG9wkhMdUEq33rBYro/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1GcskQNahO_zlMFSG9wkhMdUEq33rBYro" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf17">
+    <h2>Biblia keto argentina (7)</h2>
+    <iframe src="https://drive.google.com/file/d/1sn5NhJyqZ6QcWnUbcKZBmpS9M987xfin/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1sn5NhJyqZ6QcWnUbcKZBmpS9M987xfin" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
+
+  <section class="pdf-section" id="pdf18">
+    <h2>Menú keto de emergencia</h2>
+    <iframe src="https://drive.google.com/file/d/1K2ybeQhYWV8Jzc5UzNU5yhhkc94wEvMM/preview"></iframe>
+    <a class="download-link" href="https://drive.google.com/uc?export=download&id=1K2ybeQhYWV8Jzc5UzNU5yhhkc94wEvMM" target="_blank" rel="noopener">Descargar PDF</a>
+  </section>
 
   <button id="topBtn" title="Volver arriba">↑</button>
 
@@ -331,8 +441,8 @@
   </footer>
 
   <script>
-    // Animación fade-in on scroll
-    const pdfSections = document.querySelectorAll('.pdf-section');
+    // Fade-in animaciones
+    const pdfSections = document.querySelectorAll('section.pdf-section');
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
